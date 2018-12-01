@@ -1,0 +1,54 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * Copyright (c) 2018 Reuben Morais
+ */
+
+#form-container {
+  display: flex;
+}
+
+#status-container.connected .hide-connected,
+#status-container.disconnected .hide-disconnected,
+#status-container.error .hide-error {
+  display: none;
+}
+
+#error-message {
+  color: red;
+}
+
+p {
+  width: 100%;
+}
+
+input {
+  margin-right: 0.5em;
+}
+
+#host {
+  flex: 3 0 2em;
+}
+
+#port {
+  width: 6em;
+}
+
+#connect {
+  flex: 0 0 auto;
+}
+
+#connected-message {
+  white-space: nowrap;
+}
+
+#disconnect {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  width: 400px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,63 @@
+{
+  "manifest_version": 2,
+  "name": "Esper",
+  "version": "0.1.3",
+  "description": "A Voice Assistant for the Web.",
+
+  "applications": {
+    "gecko": {
+      "id": "esper-fx-ext@reub.in"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Esper",
+    "browser_style": true
+  },
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*",
+        "file:///*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "match_about_blank": true
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "*://*/*",
+    "file:///*",
+    "activeTab",
+    "bookmarks",
+    "clipboardRead",
+    "clipboardWrite",
+    "cookies",
+    "downloads",
+    "downloads.open",
+    "find",
+    "history",
+    "sessions",
+    "tabs"
+  ],
+
+  "web_accessible_resources": [
+    "icons/loader-128.gif"
+  ]
+}
